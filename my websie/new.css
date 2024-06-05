@@ -15,7 +15,7 @@ header {
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -41,64 +41,43 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 10px; 
-    
    
 }
 
 nav ul li a:hover {
     color: #c2610c; 
 }
-.top{
-    position: relative;
-    font-size: large;
+.intro-over-elements {
+    position: absolute;
+    top: 50%;
+    left: 71%;
+  
+    transform: translate(-18%, -40%);
     color: white;
-   text-align: center;
-   font-size: 35px;
-}
-.events-container {
-    position: relative; 
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.event {
-    display: flex;
-    background-color: #a46221;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    
+    
 }
 
-.event-image {
-    flex: 1;
-}
-
-.event-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.event-details {
-    flex: 2;
-    padding: 20px;
-}
-
-.event-details h2 {
-    margin-top: 1;
-    font-size: 30px;
-    color: #472705;
-}
-.event-details p
+.item-title
 {
-font-size: 25px;
-color: #fffefc;
+display: flex;
+color: #c2610c;
+font-size: 22pt;
+
+
+
 
 }
-.event:hover {
-    background-color: rgba(255, 255, 255, 0.3); 
+.item-text
+{
+    display: flex;
+font-style: italic;
+color: #ffffff;
+font-size: 22pt;
 }
 
 footer{
@@ -127,10 +106,6 @@ footer{
     text-align: center;
 }
 
-.footer-text p {
-    margin: 0;
-    line-height: 1.5;
-}
 .footer link
 {
     color: white;
@@ -147,6 +122,11 @@ footer{
     transition: color 0.3s, background-color 0.3s;
 }
 .footer-link a:hover{color: #c2610c;}
+
+.footer-text p {
+    margin: 0;
+    line-height: 1.5;
+}
 .footer-icons {
     display: flex;
     gap: 15px;

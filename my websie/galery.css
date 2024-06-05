@@ -7,7 +7,7 @@ body
         padding: 0;
         
     }
-img{width: 100%;}
+
 header {
     background-color: #553009;
     color: white;
@@ -15,7 +15,7 @@ header {
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -41,65 +41,56 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 10px; 
-    
    
 }
 
 nav ul li a:hover {
     color: #c2610c; 
 }
-.top{
-    position: relative;
-    font-size: large;
-    color: white;
-   text-align: center;
-   font-size: 35px;
-}
-.events-container {
-    position: relative; 
+
+
+.gallery {
+    max-height: 30%;
+    max-width: 90%;
     margin: 20px auto;
-    padding: 0 20px;
+    text-align: center;
+    
+    
 }
 
-.event {
-    display: flex;
-    background-color: #a46221;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-
-}
-
-.event-image {
-    flex: 1;
-}
-
-.event-image img {
+.slides {
+    
+    
     width: 100%;
-    height: auto;
-    display: block;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
 }
 
-.event-details {
-    flex: 2;
-    padding: 20px;
+button.prev {
+    left: 0;
 }
 
-.event-details h2 {
-    margin-top: 1;
-    font-size: 30px;
-    color: #472705;
+button.next {
+    right: 0;
 }
-.event-details p
-{
-font-size: 25px;
-color: #fffefc;
 
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.event:hover {
-    background-color: rgba(255, 255, 255, 0.3); 
-}
+
 
 footer{
     background-color: #553009;
